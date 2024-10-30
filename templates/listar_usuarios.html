@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários Cadastrados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Usuários Cadastrados</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{ usuario[0] }}</td>
+                <td>{{ usuario[1] }}</td>
+                <td>{{ usuario[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('admin') }}">Voltar à Administração</a>
+    </div>
+</body>
+</html>

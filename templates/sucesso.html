@@ -1,0 +1,25 @@
+<!-- sucesso.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva Confirmada</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Reserva Confirmada!</h1>
+        <p>Obrigado, {{ nome }}! Sua reserva foi realizada com sucesso!</p>
+        <p>Seu código de reserva é: <strong>{{ codigo }}</strong></p>
+
+        <p>Um e-mail foi enviado com os detalhes da sua reserva. Verifique sua caixa de entrada e a pasta de SPAM.</p>
+        
+        <!-- Mensagem personalizada com correção de gênero e data no formato "DD de MM de AAAA" -->
+        <p>{{ mensagem }}</p>  <!-- Aqui está a correção -->
+
+        <!-- Botão estilizado para fazer outra reserva -->
+        <a href="{{ url_for('reservar') }}" class="btn">Fazer outra reserva</a>
+    </div>
+</body>
+</html>

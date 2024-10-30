@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Reservas</h2>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>WhatsApp</th>
+                <th>Email</th>
+                <th>Tipo de Reserva</th>
+                <th>Quantidade</th>
+                <th>Data</th>
+                <th>Hora</th>
+            </tr>
+            {% for reserva in reservas %}
+            <tr>
+                <td>{{ reserva[1] }}</td>
+                <td>{{ reserva[2] }}</td>
+                <td>{{ reserva[3] }}</td>
+                <td>{{ reserva[4] }}</td>
+                <td>{{ reserva[5] }}</td>
+                <td>{{ reserva[6] }}</td>
+                <td>{{ reserva[7] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('logout') }}">Sair</a>
+    </div>
+</body>
+</html>

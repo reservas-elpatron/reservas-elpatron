@@ -1,0 +1,154 @@
+/* Estilos básicos do formulário */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container, .login-container, .form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #28a745; /* Cor verde para destaque na página de sucesso */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button, a.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+button:hover, a.button:hover {
+    background-color: #218838;
+}
+
+/* Ajustando para telas menores */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Estilos para a página de sucesso */
+.button, .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button:hover, .btn:hover {
+    background-color: #218838;
+}
+
+/* Estilos para mensagens de feedback (success, error) */
+.flashes {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.flashes li {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.flashes li.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flashes li.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Estilos para tabelas (admin.html) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para botões na página de administração (admin.html) */
+.admin-options a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.admin-options a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos específicos para o login e cadastro */
+.login-container, .form-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Usuário - Administração El Patrón</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Cadastrar Novo Usuário</h2>
+        <form method="POST" action="{{ url_for('cadastrar_usuario') }}">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="E-mail" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Senha" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+        
+        <a href="{{ url_for('admin') }}" class="button back">Voltar ao Painel</a>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>
